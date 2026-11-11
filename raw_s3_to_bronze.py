@@ -24,3 +24,5 @@ query = (spark.readStream
     .trigger(availableNow=True)
     .toTable(bronze_table_name)
 )
+
+print(f"Streaming job started for Bronze table: {bronze_table_name} with checkpoint at: {bronze_checkpoint_path}")
